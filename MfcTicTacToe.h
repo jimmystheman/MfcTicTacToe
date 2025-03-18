@@ -1,5 +1,5 @@
 
-// JimmyMFC.h : main header file for the PROJECT_NAME application
+// MfcTicTacToe.h : main header file for the PROJECT_NAME application
 //
 
 #pragma once
@@ -11,14 +11,14 @@
 #include "resource.h"		// main symbols
 
 
-// CJimmyMFCApp:
-// See JimmyMFC.cpp for the implementation of this class
+// CMfcTicTacToeApp:
+// See MfcTicTacToe.cpp for the implementation of this class
 //
 
-class CJimmyMFCApp : public CWinApp
+class CMfcTicTacToeApp : public CWinApp
 {
 public:
-	CJimmyMFCApp();
+	CMfcTicTacToeApp();
 
 // Overrides
 public:
@@ -29,4 +29,4 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
-extern CJimmyMFCApp theApp;
+extern CMfcTicTacToeApp theApp;

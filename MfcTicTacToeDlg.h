@@ -1,20 +1,20 @@
 
-// JimmyMFCDlg.h : header file
+// MfcTicTacToeDlg.h : header file
 //
 
 #pragma once
 
 
-// CJimmyMFCDlg dialog
-class CJimmyMFCDlg : public CDialogEx
+// CMfcTicTacToeDlg dialog
+class CMfcTicTacToeDlg : public CDialogEx
 {
 // Construction
 public:
-	CJimmyMFCDlg(CWnd* pParent = nullptr);	// standard constructor
+	CMfcTicTacToeDlg(CWnd* pParent = nullptr);	// standard constructor
 
 // Dialog Data
 #ifdef AFX_DESIGN_TIME
-	enum { IDD = IDD_JIMMYMFC_DIALOG };
+	enum { IDD = IDD_MFCTICTACTOE_DIALOG };
 #endif
 
 	protected:

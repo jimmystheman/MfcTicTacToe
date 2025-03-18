@@ -1,27 +1,27 @@
 
-// JimmyMFC.cpp : Defines the class behaviors for the application.
+// MfcTicTacToe.cpp : Defines the class behaviors for the application.
 //
 
 #include "pch.h"
 #include "framework.h"
-#include "JimmyMFC.h"
-#include "JimmyMFCDlg.h"
+#include "MfcTicTacToe.h"
+#include "MfcTicTacToeDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CJimmyMFCApp
+// CMfcTicTacToeApp
 
-BEGIN_MESSAGE_MAP(CJimmyMFCApp, CWinApp)
+BEGIN_MESSAGE_MAP(CMfcTicTacToeApp, CWinApp)
 	ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
 END_MESSAGE_MAP()
 
 
-// CJimmyMFCApp construction
+// CMfcTicTacToeApp construction
 
-CJimmyMFCApp::CJimmyMFCApp()
+CMfcTicTacToeApp::CMfcTicTacToeApp()
 {
 	// support Restart Manager
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_RESTART;
@@ -31,14 +31,14 @@ CJimmyMFCApp::CJimmyMFCApp()
 }
 
 
-// The one and only CJimmyMFCApp object
+// The one and only CMfcTicTacToeApp object
 
-CJimmyMFCApp theApp;
+CMfcTicTacToeApp theApp;
 
 
-// CJimmyMFCApp initialization
+// CMfcTicTacToeApp initialization
 
-BOOL CJimmyMFCApp::InitInstance()
+BOOL CMfcTicTacToeApp::InitInstance()
 {
 	// InitCommonControlsEx() is required on Windows XP if an application
 	// manifest specifies use of ComCtl32.dll version 6 or later to enable
@@ -71,7 +71,7 @@ BOOL CJimmyMFCApp::InitInstance()
 	// such as the name of your company or organization
 	SetRegistryKey(_T("Local AppWizard-Generated Applications"));
 
-	CJimmyMFCDlg dlg;
+	CMfcTicTacToeDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)

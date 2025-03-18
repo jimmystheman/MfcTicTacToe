@@ -22,8 +22,9 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <ProjectGuid>{F17DE6BB-D630-E81F-7970-C5C679AAFA6D}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
-    <RootNamespace>JimmyMFC</RootNamespace>
+    <RootNamespace>MfcTicTacToe</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MfcTicTacToe</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -184,15 +185,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
-    <ClInclude Include="JimmyMFC.h" />
-    <ClInclude Include="JimmyMFCDlg.h" />
+    <ClInclude Include="MfcTicTacToe.h" />
+    <ClInclude Include="MfcTicTacToeDlg.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="JimmyMFC.cpp" />
-    <ClCompile Include="JimmyMFCDlg.cpp" />
+    <ClCompile Include="MfcTicTacToe.cpp" />
+    <ClCompile Include="MfcTicTacToeDlg.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -201,13 +202,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="JimmyMFC.rc" />
+    <ResourceCompile Include="MfcTicTacToe.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\JimmyMFC.rc2" />
+    <None Include="res\MfcTicTacToe.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\JimmyMFC.ico" />
+    <Image Include="res\MfcTicTacToe.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

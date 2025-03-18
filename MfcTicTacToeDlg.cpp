@@ -1,11 +1,11 @@
 
-// JimmyMFCDlg.cpp : implementation file
+// MfcTicTacToeDlg.cpp : implementation file
 //
 
 #include "pch.h"
 #include "framework.h"
-#include "JimmyMFC.h"
-#include "JimmyMFCDlg.h"
+#include "MfcTicTacToe.h"
+#include "MfcTicTacToeDlg.h"
 #include "afxdialogex.h"
 #include <map>
 
@@ -47,41 +47,41 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CJimmyMFCDlg dialog
+// CMfcTicTacToeDlg dialog
 
 
 
-CJimmyMFCDlg::CJimmyMFCDlg(CWnd* pParent /*=nullptr*/)
-	: CDialogEx(IDD_JIMMYMFC_DIALOG, pParent)
+CMfcTicTacToeDlg::CMfcTicTacToeDlg(CWnd* pParent /*=nullptr*/)
+	: CDialogEx(IDD_MFCTICTACTOE_DIALOG, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-void CJimmyMFCDlg::DoDataExchange(CDataExchange* pDX)
+void CMfcTicTacToeDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 }
 
-BEGIN_MESSAGE_MAP(CJimmyMFCDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(CMfcTicTacToeDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-	ON_BN_CLICKED(IDOK, &CJimmyMFCDlg::OnBnClickedOk)
-	ON_BN_CLICKED(IDC_BUTTON1, &CJimmyMFCDlg::OnBnClickedButton1)
-	ON_BN_CLICKED(IDC_BUTTON2, &CJimmyMFCDlg::OnBnClickedButton2)
-	ON_BN_CLICKED(IDC_BUTTON3, &CJimmyMFCDlg::OnBnClickedButton3)
-	ON_BN_CLICKED(IDC_BUTTON4, &CJimmyMFCDlg::OnBnClickedButton4)
-	ON_BN_CLICKED(IDC_BUTTON5, &CJimmyMFCDlg::OnBnClickedButton5)
-	ON_BN_CLICKED(IDC_BUTTON6, &CJimmyMFCDlg::OnBnClickedButton6)
-	ON_BN_CLICKED(IDC_BUTTON7, &CJimmyMFCDlg::OnBnClickedButton7)
-	ON_BN_CLICKED(IDC_BUTTON8, &CJimmyMFCDlg::OnBnClickedButton8)
-	ON_BN_CLICKED(IDC_BUTTON9, &CJimmyMFCDlg::OnBnClickedButton9)
+	ON_BN_CLICKED(IDOK, &CMfcTicTacToeDlg::OnBnClickedOk)
+	ON_BN_CLICKED(IDC_BUTTON1, &CMfcTicTacToeDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CMfcTicTacToeDlg::OnBnClickedButton2)
+	ON_BN_CLICKED(IDC_BUTTON3, &CMfcTicTacToeDlg::OnBnClickedButton3)
+	ON_BN_CLICKED(IDC_BUTTON4, &CMfcTicTacToeDlg::OnBnClickedButton4)
+	ON_BN_CLICKED(IDC_BUTTON5, &CMfcTicTacToeDlg::OnBnClickedButton5)
+	ON_BN_CLICKED(IDC_BUTTON6, &CMfcTicTacToeDlg::OnBnClickedButton6)
+	ON_BN_CLICKED(IDC_BUTTON7, &CMfcTicTacToeDlg::OnBnClickedButton7)
+	ON_BN_CLICKED(IDC_BUTTON8, &CMfcTicTacToeDlg::OnBnClickedButton8)
+	ON_BN_CLICKED(IDC_BUTTON9, &CMfcTicTacToeDlg::OnBnClickedButton9)
 END_MESSAGE_MAP()
 
 
-// CJimmyMFCDlg message handlers
+// CMfcTicTacToeDlg message handlers
 
-BOOL CJimmyMFCDlg::OnInitDialog()
+BOOL CMfcTicTacToeDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
@@ -115,7 +115,7 @@ BOOL CJimmyMFCDlg::OnInitDialog()
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
-void CJimmyMFCDlg::OnSysCommand(UINT nID, LPARAM lParam)
+void CMfcTicTacToeDlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
 	{
@@ -132,7 +132,7 @@ void CJimmyMFCDlg::OnSysCommand(UINT nID, LPARAM lParam)
 //  to draw the icon.  For MFC applications using the document/view model,
 //  this is automatically done for you by the framework.
 
-void CJimmyMFCDlg::OnPaint()
+void CMfcTicTacToeDlg::OnPaint()
 {
 	if (IsIconic())
 	{
@@ -159,12 +159,12 @@ void CJimmyMFCDlg::OnPaint()
 
 // The system calls this function to obtain the cursor to display while the user drags
 //  the minimized window.
-HCURSOR CJimmyMFCDlg::OnQueryDragIcon()
+HCURSOR CMfcTicTacToeDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
-void CJimmyMFCDlg::OnBnClickedOk()
+void CMfcTicTacToeDlg::OnBnClickedOk()
 {
 	// TODO: Add your control notification handler code here
 	//CDialogEx::OnOK();
@@ -172,52 +172,52 @@ void CJimmyMFCDlg::OnBnClickedOk()
 	Reset();
 }
 
-void CJimmyMFCDlg::OnBnClickedButton1()
+void CMfcTicTacToeDlg::OnBnClickedButton1()
 {
 	HandleClick(GetDlgItem(IDC_BUTTON1));
 }
 
-void CJimmyMFCDlg::OnBnClickedButton2()
+void CMfcTicTacToeDlg::OnBnClickedButton2()
 {
 	HandleClick(GetDlgItem(IDC_BUTTON2));
 }
 
-void CJimmyMFCDlg::OnBnClickedButton3()
+void CMfcTicTacToeDlg::OnBnClickedButton3()
 {
 	HandleClick(GetDlgItem(IDC_BUTTON3));
 }
 
-void CJimmyMFCDlg::OnBnClickedButton4()
+void CMfcTicTacToeDlg::OnBnClickedButton4()
 {
 	HandleClick(GetDlgItem(IDC_BUTTON4));
 }
 
-void CJimmyMFCDlg::OnBnClickedButton5()
+void CMfcTicTacToeDlg::OnBnClickedButton5()
 {
 	HandleClick(GetDlgItem(IDC_BUTTON5));
 }
 
-void CJimmyMFCDlg::OnBnClickedButton6()
+void CMfcTicTacToeDlg::OnBnClickedButton6()
 {
 	HandleClick(GetDlgItem(IDC_BUTTON6));
 }
 
-void CJimmyMFCDlg::OnBnClickedButton7()
+void CMfcTicTacToeDlg::OnBnClickedButton7()
 {
 	HandleClick(GetDlgItem(IDC_BUTTON7));
 }
 
-void CJimmyMFCDlg::OnBnClickedButton8()
+void CMfcTicTacToeDlg::OnBnClickedButton8()
 {
 	HandleClick(GetDlgItem(IDC_BUTTON8));
 }
 
-void CJimmyMFCDlg::OnBnClickedButton9()
+void CMfcTicTacToeDlg::OnBnClickedButton9()
 {
 	HandleClick(GetDlgItem(IDC_BUTTON9));
 }
 
-void CJimmyMFCDlg::HandleClick(CWnd* button)
+void CMfcTicTacToeDlg::HandleClick(CWnd* button)
 {
 	if (game_over_)
 		return;
@@ -246,7 +246,7 @@ void CJimmyMFCDlg::HandleClick(CWnd* button)
 	}
 }
 
-bool CJimmyMFCDlg::CheckWin(CString& winner)
+bool CMfcTicTacToeDlg::CheckWin(CString& winner)
 {
 	/* ways to win :
 		- 3 in a row horizontally (boxes 123, 456, 789)
@@ -330,7 +330,7 @@ bool CJimmyMFCDlg::CheckWin(CString& winner)
 	return false;
 }
 
-void CJimmyMFCDlg::Reset()
+void CMfcTicTacToeDlg::Reset()
 {
 	GetDlgItem(IDC_BUTTON1)->SetWindowTextW(L" ");
 	GetDlgItem(IDC_BUTTON2)->SetWindowTextW(L" ");
@@ -347,7 +347,7 @@ void CJimmyMFCDlg::Reset()
 	game_over_ = false;
 }
 
-bool CJimmyMFCDlg::CheckDraw()
+bool CMfcTicTacToeDlg::CheckDraw()
 {
 	// vals
 	CString val1, val2, val3, val4, val5, val6, val7, val8, val9;
