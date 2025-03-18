@@ -85,6 +85,8 @@ BOOL CMfcTicTacToeDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
+	SetWindowText(_T("Tic Tac Toe in MFC"));
+
 	// Add "About..." menu item to system menu.
 
 	// IDM_ABOUTBOX must be in the system command range.
